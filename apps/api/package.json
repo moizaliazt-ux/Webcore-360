@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "node --trace-deprecation --env-file=.env src/main.js",
+    "build": "concurrently --raw \"npm run build --prefix apps/web\"",
     "start": "node --env-file=.env src/main.js",
     "lint": "eslint . --quiet"
   },
